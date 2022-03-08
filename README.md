@@ -8,7 +8,7 @@ Use the following lines to install imagemagick and the python-imaging-library (P
 
 ```bash
 sudo apt-get update
-sudo apt-get install imagemagick php5-imagick
+sudo apt-get install imagemagick php-imagick
 pip install pillow
 ```
 
@@ -21,7 +21,11 @@ pip install pillow
 
 3\. then use the following bash script which processes the images, rescaling all of the png's you placed in the folders the MNIST standard 28x28pixel size
 
-`./resize-script.sh`
+`bash ./resize-script.sh`
+
+If errors Make script work on WSL 
+`sudo apt install dos2unix`
+`dos2unix resize-script.sh`
 
 4\. lastly, run the following python script to fold all the pics and categories into a single ble binary -- binary will appear as `ubyte` files ready to tar
 
