@@ -24,7 +24,7 @@ for name in Names:
 
 		label = int(filename.split('/')[2])
 
-		Im = Image.open(filename)
+		Im = Image.open(filename).convert('L') #open in grayscale - L for luminosity
 
 		pixel = Im.load()
 
